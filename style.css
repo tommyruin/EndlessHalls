@@ -1,0 +1,141 @@
+.game-container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  flex-direction: column; /* Make sure the canvas is above the controls */
+  height: 100vh; /* Take up the full viewport height */
+}
+body {
+  background: linear-gradient(to bottom, #3b2e22, #2a2017);  /* Dark brown gradient */
+  font-family: 'Press Start 2P', cursive;  /* Ensure consistency across the game */
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto; /* Center the canvas */
+  background-color: lightgrey;
+  border: 2px solid black;
+}
+
+.controls {
+  font-family: 'Press Start 2P', cursive;  /* Pixel font */
+  color: white;
+  text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
+  position: absolute;  /* Keep the controls above the game window */
+  z-index: 100;  /* Ensure they float above the game */
+  bottom: 60px;  /* Position them 20px from the bottom */
+  left: 50%;  /* Center horizontally */
+  transform: translateX(-50%);  /* Ensure they are fully centered */
+  display: flex;
+  flex-direction: column;  /* Stack the buttons vertically */
+  align-items: center;  /* Center the buttons horizontally */
+}
+
+.middle-row {
+  display: flex;  /* Horizontal row for left, interact, and right buttons */
+  justify-content: center;
+  gap: 10px;  /* Space between the buttons */
+}
+
+button {
+  font-family: 'Press Start 2P', cursive;  /* Apply pixel font */
+  color: white;
+  background-color: #6b4423;  /* Earthy brown for a Mayan theme */
+  border: 3px solid #d4a76a;  /* Gold-like borders for a Mayan accent */
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
+  box-shadow: 0 5px #3e2e1b;  /* Shadow for a 3D effect */
+  border-radius: 5px;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+button:active {
+  transform: translateY(4px);  /* Press-down effect */
+  box-shadow: 0 2px #3e2e1b;
+}
+
+button:hover {
+  background-color: #8b5c35;  /* Darker background on hover */
+}
+
+.canvas-container {
+  position: relative;
+  width: 1200px;  /* The width of the container */
+  height: 1200px; /* The height of the container */
+  overflow: hidden;  /* Hide the parts that go beyond the central tile */
+  margin: 0 auto;  /* Center the container horizontally */
+}
+
+#mazeCanvas {
+  width: 1200px;   /* Set canvas width */
+  height: 1200px;  /* Set canvas height */
+  transform: scale(2);  /* Scale the canvas up by 3x */
+  transform-origin: center;  /* Keep the scaling centered on the middle */
+  position: absolute;
+   position: absolute;
+  top: 50%;        /* Move the canvas down by 50% */
+  left: 50%;       /* Move the canvas right by 50% */
+  translate: -50% -50%; /* Pull the canvas back into view by half of its size */
+}
+.maze-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 1200px;
+  height: 1200px;
+}
+
+#inventory, #interaction-message {
+  font-family: 'Press Start 2P', cursive;  /* Apply pixel font */
+  color: white;  /* Make the text white */
+  text-shadow: 1px 1px 0 black,  /* Thin black outline effect */
+               -1px 1px 0 black,
+               1px -1px 0 black,
+               -1px -1px 0 black;
+  position: absolute;
+  z-index: 100;  /* Ensure it remains above the game window */
+}
+
+#interaction-message {
+  background-color: black;
+  border: 2px solid white;  
+  font-family: 'Press Start 2P', cursive;  /* Pixel font */
+  color: white;
+  text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
+  position: absolute;  /* Position independently */
+  z-index: 100;  /* Keep it above the game window */
+  top: 20px;  /* Adjust the position to where you want the message to appear */
+  left: 50%;  /* Center horizontally */
+  transform: translateX(-50%);  /* Ensure perfect centering */
+  word-wrap: break-word;  /* Ensure text breaks if it's too long */
+  white-space: normal;  /* Allow the text to wrap onto multiple lines */
+}
+
+#inventory {
+  top: 50px;
+  right: 10px;
+  font-size: 16px;  /* Adjust font size for inventory */
+}
+
+#game-title {
+  font-family: 'Press Start 2P', cursive;  /* Pixel font for the title */
+  color: #f4e7d1;  /* Sand-like color for the text */
+  text-shadow: 2px 2px 0 #6b4423,  /* Thick shadow in brown for a carved look */
+               -2px 2px 0 #6b4423,
+               2px -2px 0 #6b4423,
+               -2px -2px 0 #6b4423;
+  text-align: center;  /* Center the title */
+  margin-top: 20px;  /* Space between the title and the top of the page */
+  font-size: 36px;  /* Make the title larger */
+  letter-spacing: 2px;  /* Add spacing for a bold, ancient text feel */
+  position: relative;
+  z-index: 100;  /* Ensure it stays above the game display */
+}
+#miniMapCanvas, #coordinatesDisplay, #cellDefinitionDisplay {
+  display: none;  /* This hides the minimap, player position, and current cell */
+}

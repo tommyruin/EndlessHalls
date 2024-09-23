@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endless Halls Maze</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="game.js"></script>
+</head>
+<body>
+    <h1 id="game-title">The Endless Halls</h1>
+<div id="audio-controls" style="text-align: center; margin-bottom: 10px;">
+    <label for="volume-slider" style="color: white;">Volume: </label>
+    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+    <button id="mute-btn">Mute</button>
+</div>
+
+<div class="game-container">
+  <div class="maze-display">
+    <div class="canvas-container">
+      <canvas id="mazeCanvas" width="600" height="600"></canvas>
+    </div>
+    <div id="interaction-message"></div>
+    <div id="inventory" class="inventory">
+      <h3>Inventory:</h3>
+      <ul id="inventory-list">
+          <!-- Collected orbs will appear here -->
+      </ul>
+<div class="game-container">
+  <!-- Your game display elements here -->
+  
+</div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- On-screen controls -->
+<div class="controls">
+    <button id="up-btn">Up</button>
+    <div class="middle-row">
+        <button id="left-btn">Left</button>
+        <button id="interact-btn">Interact</button>
+        <button id="right-btn">Right</button>
+    </div>
+    <button id="down-btn">Down</button>
+</div>
+
+
+
+<!-- Coordinates Display -->
+<div id="coordinatesDisplay"></div>
+
+<!-- New Cell Definition Display -->
+<div id="cellDefinitionDisplay"></div>
+
+<!-- Adjusted the mini-map size to fit the entire grid -->
+<canvas id="miniMapCanvas" width="300" height="300"></canvas> <!-- Scaled-down mini-map for the entire maze -->
+
+<script src="game.js"></script>
+
+
+
+</body>
+</html>
