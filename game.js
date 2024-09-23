@@ -161,7 +161,7 @@ const muteButton = document.getElementById('mute-btn');
 const skeletonNotes = {
     '16-22': "We've been walking round in circles for days... It seems as if the halls are repeating themselves",
     '25-19': "These orbs and runes seem key. Maybe if you match them all...",
-    '7-10': "I swore I passed the same hallway thrice, but no—it changes when I look away. The halls are endless, but not without pattern. If you see the same place again, it's likely you've been there before."
+    '7-10': "I swear I passed the same hallway before. The halls are endless, but not without pattern. If you see the same place again, it's likely you've been there before."
 };
 
 // Set the initial character image to CharacterUp
