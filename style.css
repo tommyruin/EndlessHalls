@@ -136,6 +136,6 @@ button:hover {
   position: relative;
   z-index: 100;  /* Ensure it stays above the game display */
 }
-##miniMapCanvas, ##coordinatesDisplay, ##cellDefinitionDisplay {
-  display: none;  /* This hides the minimap, player position, and current cell */
+#miniMapCanvas, #coordinatesDisplay, #cellDefinitionDisplay {
+/*  display: none;  /* This hides the minimap, player position, and current cell */
 }
