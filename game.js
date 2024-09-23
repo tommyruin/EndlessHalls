@@ -471,7 +471,7 @@ function interact() {
 
             // Check if all runes are activated
             if (activatedRunesCount === totalRunes) {
-                updateMessage("After activating the final rune, you feel a light draft flow into the chamber. Looking up, the corridor ahead appears different from when you first entered the room. A glint of gold, and the flicker of torches beckon you forward.");
+                updateMessage("After activating the final rune, you feel a light draft flow into the chamber. Looking up, the corridor ahead appears different from when you first entered the room. A glint of gold, and the flicker of torches beckon you forward. It seems you have found a way out of the Endless Halls.");
                 freezeGame();  // Call freeze game when completed
             }
         } else {
