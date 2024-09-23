@@ -115,7 +115,7 @@ const blueRune = new Image();
 blueRune.src = 'assets/BlueRune.png';
 
 const redRune = new Image();
-redRune.src = 'assets/RedRune.png';
+redRune.src = 'assets/Redrune.png';
 
 const yellowRune = new Image();
 yellowRune.src = 'assets/YellowRune.png';
